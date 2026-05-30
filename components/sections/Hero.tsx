@@ -4,18 +4,13 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { BRAND } from "@/lib/constants";
 
-const HeroCanvas = dynamic(() => import("@/components/HeroCanvas"), {
-  ssr: false,
-});
+const HeroCanvas = dynamic(() => import("@/components/HeroCanvas"), { ssr: false });
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden pt-[68px]"
-    >
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-[68px]">
       {/* Three.js canvas */}
       <div className="absolute inset-0 z-0">
         <HeroCanvas />
@@ -50,7 +45,7 @@ export default function Hero() {
             className="text-[11px] uppercase tracking-[3px] text-[#00E5FF]"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            Genesis Technologies · Est. 2026
+            Flint · Est. 2026
           </span>
         </motion.div>
 
@@ -62,8 +57,8 @@ export default function Hero() {
           className="text-[clamp(44px,7.5vw,96px)] font-bold leading-[1.03] tracking-[-2px] text-[#F4F6FA] mb-7 max-w-[820px]"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          The Origin of<br />
-          Your{" "}
+          The Origin and<br />
+          Direction of Your{" "}
           <span className="text-[#00E5FF]">Digital</span>
           <br />
           Evolution.
@@ -94,16 +89,14 @@ export default function Hero() {
             className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#00E5FF] text-[#0A0A0F] rounded font-bold text-[15px] tracking-[0.3px] hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Book a discovery call
-            <span>→</span>
+            Book a discovery call →
           </a>
           <a
             href="#services"
             className="inline-flex items-center gap-2.5 px-8 py-4 border border-white/10 text-[#F4F6FA] rounded font-semibold text-[15px] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Explore services
-            <span>→</span>
+            Explore services →
           </a>
         </motion.div>
 

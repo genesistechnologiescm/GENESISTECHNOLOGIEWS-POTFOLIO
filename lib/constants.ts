@@ -1,15 +1,15 @@
 export const BRAND = {
   email: "officialkaisy@gmail.com",
   phone: "653158701",
-  tagline: "The Origin of Your Digital Evolution.",
-  company: "Genesis Technologies",
+  tagline: "The Origin and direction of Your Digital Evolution.",
+  company: "Flint",
 } as const;
 
 export const SERVICES = [
   {
     id: "build",
     number: "01",
-    slug: "Genesis Build",
+    slug: "Flint Build",
     name: "Custom Software Development",
     description:
       "Full-stack web applications, business platforms, client portals, and API systems — built from scratch to your exact specification. No templates. No compromises.",
@@ -26,7 +26,7 @@ export const SERVICES = [
   {
     id: "intelligence",
     number: "02",
-    slug: "Genesis Intelligence",
+    slug: "Flint Intelligence",
     name: "Data Science & Analytics",
     description:
       "Transform raw data into operational intelligence. We build pipelines, dashboards, and predictive models that give leadership real-time visibility into what matters.",
@@ -43,7 +43,7 @@ export const SERVICES = [
   {
     id: "automate",
     number: "03",
-    slug: "Genesis Automate",
+    slug: "Flint Automate",
     name: "AI & Workflow Automation",
     description:
       "Eliminate manual processes, reduce human error, and build workflows that run 24/7. From AI integrations to end-to-end business process automation.",
@@ -60,7 +60,7 @@ export const SERVICES = [
   {
     id: "consult",
     number: "04",
-    slug: "Genesis Consult",
+    slug: "Flint Consult",
     name: "Strategic Tech Advisory",
     description:
       "Not sure what to build or where to start? We map your technical landscape, identify the highest-leverage opportunities, and hand you a roadmap that makes decisions easy.",
@@ -101,7 +101,7 @@ export const PROCESS_STEPS = [
 
 export const CAPABILITIES = [
   {
-    serviceSlug: "Genesis Build",
+    serviceSlug: "Flint Build",
     label: "Software Engineering",
     items: [
       { title: "Full-Stack Development", desc: "React, Next.js, Node.js, Python. MVP to enterprise-grade production system." },
@@ -110,7 +110,7 @@ export const CAPABILITIES = [
     ],
   },
   {
-    serviceSlug: "Genesis Intelligence",
+    serviceSlug: "Flint Intelligence",
     label: "Data Engineering",
     items: [
       { title: "Data Pipelines", desc: "ETL design, cleaning, transformation. Real-time and batch processing at scale." },
@@ -119,7 +119,7 @@ export const CAPABILITIES = [
     ],
   },
   {
-    serviceSlug: "Genesis Automate",
+    serviceSlug: "Flint Automate",
     label: "AI & Automation",
     items: [
       { title: "AI Agents", desc: "Custom LLM-powered agents. GPT-4o, Claude, Gemini integrations built for your workflow." },
@@ -128,7 +128,7 @@ export const CAPABILITIES = [
     ],
   },
   {
-    serviceSlug: "Genesis Consult",
+    serviceSlug: "Flint Consult",
     label: "Strategic Advisory",
     items: [
       { title: "Technology Audit", desc: "We map your full technical landscape — what's working, what's costing you, what needs replacing." },

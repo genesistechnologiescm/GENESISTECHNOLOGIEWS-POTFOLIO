@@ -14,31 +14,25 @@ export default function Footer() {
       <div className="max-w-[1160px] mx-auto px-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
 
-          {/* Logo */}
-          <a href="#hero" className="flex items-center gap-3.5">
-            <svg width="28" height="28" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="34" fill="none" stroke="#F4F6FA" strokeWidth="2.5" />
-              <circle cx="50" cy="50" r="10" fill="#00E5FF" />
+          {/* Logo — Trinity Mark */}
+          <a href="#hero" className="flex items-center gap-3.5" aria-label="Flint — home">
+            <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+              <polygon points="50,12 83,62 17,62" fill="none" stroke="#F4F6FA" strokeWidth="2" strokeLinejoin="round"/>
+              <polygon points="50,68 17,38 83,38" fill="#00E5FF"/>
             </svg>
             <div>
               <div
-                className="text-[14px] font-bold uppercase tracking-[0.5px] text-[#F4F6FA] leading-none"
+                className="text-[14px] font-bold uppercase tracking-[1.5px] text-[#F4F6FA] leading-none"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Genesis
-              </div>
-              <div
-                className="text-[7px] uppercase tracking-[5px] text-[#00E5FF] mt-1"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                Technologies
+                Flint
               </div>
             </div>
           </a>
 
           {/* Tagline */}
           <p
-            className="text-[11px] uppercase tracking-[2px] text-[#8A94A6] hidden lg:block"
+            className="text-[11px] uppercase tracking-[2px] text-[#8A94A6] hidden lg:block max-w-[340px] text-center"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {BRAND.tagline}
@@ -65,7 +59,7 @@ export default function Footer() {
             className="text-[11px] text-[#8A94A6] opacity-40 tracking-[1px]"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            © 2026 Genesis Technologies. All rights reserved.
+            © 2026 Flint. All rights reserved.
           </span>
           <span
             className="text-[11px] text-[#8A94A6] opacity-40 tracking-[1px]"

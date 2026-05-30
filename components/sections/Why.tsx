@@ -31,7 +31,7 @@ export default function Why() {
               className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-5"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              Why Genesis
+              Why Flint
             </motion.span>
 
             <motion.h2

@@ -24,9 +24,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Genesis Technologies — The Origin of Your Digital Evolution",
+  title: "Flint — The Origin and direction of Your Digital Evolution.",
   description:
-    "Custom software development, data science & analytics, AI automation, and technology consultancy. Genesis Technologies builds systems that run your business at full intelligence.",
+    "Custom software development, data science & analytics, AI automation, and technology consultancy. Flint builds systems that run your business at full intelligence.",
   keywords: [
     "custom software development",
     "data science",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "business intelligence",
     "workflow automation",
   ],
-  authors: [{ name: "Genesis Technologies" }],
+  authors: [{ name: "Flint" }],
   openGraph: {
-    title: "Genesis Technologies — The Origin of Your Digital Evolution",
+    title: "Flint — The Origin and direction of Your Digital Evolution.",
     description:
       "We build systems that run your business better — measurably, reliably, and built to grow with you.",
     type: "website",
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Genesis Technologies",
-    description: "The Origin of Your Digital Evolution.",
+    title: "Flint",
+    description: "The Origin and direction of Your Digital Evolution.",
   },
 };
 

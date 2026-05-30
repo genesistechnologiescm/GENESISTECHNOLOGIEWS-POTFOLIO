@@ -35,45 +35,35 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-[1160px] mx-auto px-8 h-[68px] flex items-center justify-between">
-          {/* Logo */}
-          <a href="#hero" className="flex items-center gap-3.5 group">
+          {/* Logo — Trinity Mark */}
+          <a href="#hero" className="flex items-center gap-3.5 group" aria-label="Flint — home">
             <svg
               width="34"
               height="34"
               viewBox="0 0 100 100"
-              className="transition-transform duration-500 group-hover:rotate-90"
+              aria-hidden="true"
+              className="transition-transform duration-500 group-hover:rotate-180"
             >
-              <circle
-                cx="50" cy="50" r="34"
-                fill="none"
-                stroke="#F4F6FA"
-                strokeWidth="2.5"
-              />
-              <circle cx="50" cy="50" r="10" fill="#00E5FF" />
+              <polygon points="50,12 83,62 17,62" fill="none" stroke="#F4F6FA" strokeWidth="2" strokeLinejoin="round"/>
+              <polygon points="50,68 17,38 83,38" fill="#00E5FF"/>
             </svg>
             <div className="flex flex-col">
               <span
-                className="text-[17px] font-bold uppercase tracking-[0.5px] text-[#F4F6FA] leading-none"
+                className="text-[17px] font-bold uppercase tracking-[1.5px] text-[#F4F6FA] leading-none"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Genesis
-              </span>
-              <span
-                className="text-[8px] uppercase tracking-[5px] text-[#00E5FF] mt-[5px]"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                Technologies
+                Flint
               </span>
             </div>
           </a>
 
-          {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-9">
+          {/* Desktop nav */}
+          <ul className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="text-[14px] font-medium text-[#8A94A6] hover:text-[#F4F6FA] transition-colors duration-200 tracking-[0.2px]"
+                  className="text-[13px] text-[#8A94A6] hover:text-[#F4F6FA] transition-colors duration-200 tracking-[0.3px]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {l.label}
@@ -82,60 +72,55 @@ export default function Nav() {
             ))}
           </ul>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* CTA */}
+          <div className="hidden md:flex items-center gap-4">
             <a
               href={`mailto:${BRAND.email}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00E5FF] text-[#0A0A0F] rounded font-bold text-[13px] tracking-[0.4px] hover:opacity-90 hover:-translate-y-px transition-all duration-200"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Start a project
-              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              Book a call
             </a>
           </div>
 
-          {/* Mobile toggle */}
+          {/* Mobile menu button */}
           <button
+            className="md:hidden text-[#F4F6FA] p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-[#F4F6FA] p-1"
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile drawer */}
+      {/* Mobile overlay */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.22 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 bg-[#0A0A0F]/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 md:hidden"
           >
-            {links.map((l, i) => (
-              <motion.a
+            {links.map((l) => (
+              <a
                 key={l.href}
                 href={l.href}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.06 }}
                 onClick={() => setMenuOpen(false)}
                 className="text-3xl font-bold text-[#F4F6FA] hover:text-[#00E5FF] transition-colors"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {l.label}
-              </motion.a>
+              </a>
             ))}
             <a
               href={`mailto:${BRAND.email}`}
               className="mt-4 px-8 py-3 bg-[#00E5FF] text-[#0A0A0F] rounded font-bold text-lg"
               style={{ fontFamily: "var(--font-display)" }}
-              onClick={() => setMenuOpen(false)}
             >
-              Start a project
+              Book a call
             </a>
           </motion.div>
         )}

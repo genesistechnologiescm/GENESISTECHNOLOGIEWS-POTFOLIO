@@ -134,7 +134,7 @@ export default function About() {
               className="text-[17px] text-[#8A94A6] leading-[1.75] mb-4"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Genesis Technologies is a digital engineering company. We don&apos;t
+              Flint is a digital engineering company. We don&apos;t
               sell templates or off-the-shelf tools. Every system we design is
               purpose-built around your business — your data, your workflows,
               your future.
