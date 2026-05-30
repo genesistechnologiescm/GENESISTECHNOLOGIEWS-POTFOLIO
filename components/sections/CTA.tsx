@@ -17,7 +17,7 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="contact" ref={ref} className="py-[120px] bg-[#10101A] relative overflow-hidden">
+    <section id="contact" ref={ref} className="py-[120px] bg-[var(--bg-surface)] relative overflow-hidden">
       {/* Glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none"
@@ -33,7 +33,7 @@ export default function CTA() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-6"
+            className="block text-[11px] uppercase tracking-[4px] text-[var(--cyan)] opacity-80 mb-6"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Get Started
@@ -43,19 +43,19 @@ export default function CTA() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.08, ease }}
-            className="text-[clamp(34px,5.5vw,64px)] font-bold leading-[1.08] tracking-[-1px] text-[#F4F6FA] mb-6"
+            className="text-[clamp(34px,5.5vw,64px)] font-bold leading-[1.08] tracking-[-1px] text-[var(--text)] mb-6"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Ready to build<br />
             something{" "}
-            <span className="text-[#00E5FF]">real</span>?
+            <span className="text-[var(--cyan)]">real</span>?
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.18, ease }}
-            className="text-[17px] text-[#8A94A6] leading-[1.75] mb-12"
+            className="text-[17px] text-[var(--text-muted)] leading-[1.75] mb-12"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Book a free 60-minute discovery call. We&apos;ll map exactly what you
@@ -78,7 +78,7 @@ export default function CTA() {
             </a>
             <a
               href={`mailto:${BRAND.email}`}
-              className="inline-flex items-center gap-2.5 px-8 py-4 border border-white/10 text-[#F4F6FA] rounded font-semibold text-[15px] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
+              className="inline-flex items-center gap-2.5 px-8 py-4 border border-white/10 text-[var(--text)] rounded font-semibold text-[15px] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Send us a brief →
@@ -94,7 +94,7 @@ export default function CTA() {
             {meta.map((m) => (
               <div
                 key={m}
-                className="flex items-center gap-2 text-[11px] uppercase tracking-[1.5px] text-[#8A94A6]"
+                className="flex items-center gap-2 text-[11px] uppercase tracking-[1.5px] text-[var(--text-muted)]"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] opacity-60" />

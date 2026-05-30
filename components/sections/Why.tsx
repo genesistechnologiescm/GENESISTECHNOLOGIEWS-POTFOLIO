@@ -18,7 +18,7 @@ export default function Why() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="why" ref={ref} className="py-[120px] bg-[#10101A]">
+    <section id="why" ref={ref} className="py-[120px] bg-[var(--bg-surface)]">
       <div className="max-w-[1160px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
@@ -28,7 +28,7 @@ export default function Why() {
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease }}
-              className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-5"
+              className="block text-[11px] uppercase tracking-[4px] text-[var(--cyan)] opacity-80 mb-5"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               Why Flint
@@ -38,7 +38,7 @@ export default function Why() {
               initial={{ opacity: 0, y: 18 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.65, delay: 0.08, ease }}
-              className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[#F4F6FA] mb-6"
+              className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[var(--text)] mb-6"
               style={{ fontFamily: "var(--font-display)" }}
             >
               We build systems,<br />not deliverables.
@@ -48,7 +48,7 @@ export default function Why() {
               initial={{ opacity: 0, y: 14 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15, ease }}
-              className="text-[17px] text-[#8A94A6] leading-[1.75] mb-4"
+              className="text-[17px] text-[var(--text-muted)] leading-[1.75] mb-4"
               style={{ fontFamily: "var(--font-body)" }}
             >
               Most digital agencies hand you a file and disappear. We architect
@@ -60,7 +60,7 @@ export default function Why() {
               initial={{ opacity: 0, y: 14 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2, ease }}
-              className="text-[17px] text-[#8A94A6] leading-[1.75] mb-10"
+              className="text-[17px] text-[var(--text-muted)] leading-[1.75] mb-10"
               style={{ fontFamily: "var(--font-body)" }}
             >
               We cap active client projects at three. That&apos;s not a constraint —
@@ -75,14 +75,14 @@ export default function Why() {
               className="pl-8 border-l-2 border-[#00E5FF] bg-[#00E5FF]/[0.03] rounded-r-xl py-7 pr-7"
             >
               <p
-                className="text-[17px] font-semibold text-[#F4F6FA] leading-[1.55] mb-4"
+                className="text-[17px] font-semibold text-[var(--text)] leading-[1.55] mb-4"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 &ldquo;The origin of your digital evolution isn&apos;t a product. It&apos;s
                 the moment your business starts operating at full intelligence.&rdquo;
               </p>
               <cite
-                className="text-[10px] uppercase tracking-[2px] text-[#00E5FF] opacity-70 not-italic"
+                className="text-[10px] uppercase tracking-[2px] text-[var(--cyan)] opacity-70 not-italic"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 Kfusaluh Kesi Ghangha · CEO, {BRAND.company}
@@ -98,21 +98,21 @@ export default function Why() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.55, delay: 0.12 + i * 0.1, ease }}
-                className="p-7 bg-[#0A0A0F] border border-white/[0.06] rounded-xl hover:border-[#00E5FF]/20 transition-colors duration-200 group"
+                className="p-7 bg-[var(--bg)] border border-[var(--border)] rounded-xl hover:border-[#00E5FF]/20 transition-colors duration-200 group"
               >
                 <div className="flex items-center gap-3.5 mb-3">
                   <div className="w-9 h-9 rounded-lg bg-[#00E5FF]/[0.07] border border-[#00E5FF]/15 flex items-center justify-center flex-shrink-0">
                     {icons[i]}
                   </div>
                   <span
-                    className="text-[15px] font-bold text-[#F4F6FA] group-hover:text-[#00E5FF] transition-colors duration-200"
+                    className="text-[15px] font-bold text-[var(--text)] group-hover:text-[var(--cyan)] transition-colors duration-200"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {p.title}
                   </span>
                 </div>
                 <p
-                  className="text-[14px] text-[#8A94A6] leading-[1.65] pl-[52px]"
+                  className="text-[14px] text-[var(--text-muted)] leading-[1.65] pl-[52px]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {p.desc}

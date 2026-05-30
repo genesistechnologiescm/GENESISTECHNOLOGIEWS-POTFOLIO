@@ -17,7 +17,7 @@ export default function Stats() {
   return (
     <div
       ref={ref}
-      className="border-t border-b border-white/[0.06] py-10"
+      className="border-t border-b border-[var(--border)] py-10"
     >
       <div className="max-w-[1160px] mx-auto px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -30,14 +30,14 @@ export default function Stats() {
               className="text-center"
             >
               <div
-                className="text-[36px] font-bold text-[#F4F6FA] leading-none mb-1.5"
+                className="text-[36px] font-bold text-[var(--text)] leading-none mb-1.5"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {s.value}
-                <span className="text-[#00E5FF]">{s.unit}</span>
+                <span className="text-[var(--cyan)]">{s.unit}</span>
               </div>
               <div
-                className="text-[11px] uppercase tracking-[2px] text-[#8A94A6]"
+                className="text-[11px] uppercase tracking-[2px] text-[var(--text-muted)]"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {s.label}

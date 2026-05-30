@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ── Flint · Design Tokens ───────────────────── */
+/* ── Flint · Design Tokens ──────────────────────────────────── */
 @theme {
   --color-gt-black:    #0A0A0F;
   --color-gt-blue:     #1A6BFF;
@@ -15,23 +15,81 @@
   --font-mono:    var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
 }
 
+/* ── Semantic CSS Variables — Dark (default) ────────────────── */
+:root {
+  --bg:           #0A0A0F;
+  --bg-surface:   #10101A;
+  --bg-surface2:  #16161F;
+  --bg-card:      #0A0A0F;
+  --text:         #F4F6FA;
+  --text-muted:   #8A94A6;
+  --text-faint:   #5A6070;
+  --border:       rgba(255,255,255,0.06);
+  --border-strong:rgba(255,255,255,0.12);
+  --blue:         #1A6BFF;
+  --cyan:         #00E5FF;
+  --cyan-btn-text:#0A0A0F;
+  --grid-line:    rgba(26,107,255,0.03);
+  --shadow:       rgba(0,0,0,0.4);
+  --invert-logo:  0;
+}
+
+/* ── Semantic CSS Variables — Light ─────────────────────────── */
+[data-theme="light"] {
+  --bg:           #F4F6FA;
+  --bg-surface:   #FFFFFF;
+  --bg-surface2:  #EDF0F7;
+  --bg-card:      #FFFFFF;
+  --text:         #0A0A0F;
+  --text-muted:   #4A5568;
+  --text-faint:   #8A94A6;
+  --border:       rgba(0,0,0,0.07);
+  --border-strong:rgba(0,0,0,0.14);
+  --blue:         #1A6BFF;
+  --cyan:         #00B8D4;
+  --cyan-btn-text:#FFFFFF;
+  --grid-line:    rgba(26,107,255,0.04);
+  --shadow:       rgba(0,0,0,0.08);
+  --invert-logo:  1;
+}
+
 /* ── Base ───────────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
 body {
-  background: #0A0A0F;
-  color: #F4F6FA;
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ── Theme transition ───────────────────────────────────────── */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+/* Exclude transitions on elements that shouldn't animate */
+canvas, svg, .no-transition {
+  transition: none !important;
 }
 
 ::selection {
   background: rgba(0, 229, 255, 0.18);
-  color: #F4F6FA;
+  color: var(--text);
 }
 
 ::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #0A0A0F; }
-::-webkit-scrollbar-thumb { background: #1A6BFF; border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
+
+/* ── Light mode section overrides ──────────────────────────── */
+[data-theme="light"] section,
+[data-theme="light"] footer,
+[data-theme="light"] nav {
+  border-color: var(--border);
+}

@@ -18,7 +18,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-5"
+            className="block text-[11px] uppercase tracking-[4px] text-[var(--cyan)] opacity-80 mb-5"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             How We Work
@@ -27,7 +27,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.08, ease }}
-            className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[#F4F6FA] mb-5"
+            className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[var(--text)] mb-5"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Structured delivery.<br />Zero surprises.
@@ -36,7 +36,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.15, ease }}
-            className="text-[17px] text-[#8A94A6] leading-[1.75]"
+            className="text-[17px] text-[var(--text-muted)] leading-[1.75]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Every project follows the same rigorous process. You always know where we are, what&apos;s next, and what it costs.
@@ -50,7 +50,7 @@ export default function Process() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease }}
-              className="relative p-10 bg-[#10101A] border border-white/[0.06] rounded-xl hover:border-[#00E5FF]/20 hover:bg-[#10101f] transition-all duration-300 group"
+              className="relative p-10 bg-[var(--bg-surface)] border border-[var(--border)] rounded-xl hover:border-[#00E5FF]/20 hover:bg-[#10101f] transition-all duration-300 group"
             >
               {/* Step connector line */}
               {i < PROCESS_STEPS.length - 1 && (
@@ -58,21 +58,21 @@ export default function Process() {
               )}
 
               <div
-                className="text-[11px] tracking-[2px] text-[#00E5FF] opacity-50 mb-5"
+                className="text-[11px] tracking-[2px] text-[var(--cyan)] opacity-50 mb-5"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {step.num}
               </div>
 
               <h3
-                className="text-[18px] font-bold text-[#F4F6FA] mb-3 group-hover:text-[#00E5FF] transition-colors duration-200"
+                className="text-[18px] font-bold text-[var(--text)] mb-3 group-hover:text-[var(--cyan)] transition-colors duration-200"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {step.title}
               </h3>
 
               <p
-                className="text-[14px] text-[#8A94A6] leading-[1.65]"
+                className="text-[14px] text-[var(--text-muted)] leading-[1.65]"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {step.desc}

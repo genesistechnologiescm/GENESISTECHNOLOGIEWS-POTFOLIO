@@ -18,7 +18,7 @@ export default function Capabilities() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-5"
+            className="block text-[11px] uppercase tracking-[4px] text-[var(--cyan)] opacity-80 mb-5"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Technical Depth
@@ -27,7 +27,7 @@ export default function Capabilities() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.08, ease }}
-            className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[#F4F6FA] mb-5"
+            className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[var(--text)] mb-5"
             style={{ fontFamily: "var(--font-display)" }}
           >
             What we&apos;re capable of building — today and tomorrow.
@@ -36,7 +36,7 @@ export default function Capabilities() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.15, ease }}
-            className="text-[17px] text-[#8A94A6] leading-[1.75]"
+            className="text-[17px] text-[var(--text-muted)] leading-[1.75]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             We&apos;re not generalists. Every service line has deep specialisation behind it.
@@ -50,18 +50,18 @@ export default function Capabilities() {
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease }}
-              className="grid grid-cols-1 lg:grid-cols-[260px_1fr] bg-[#10101A] border border-white/[0.06] rounded-xl overflow-hidden hover:border-[#00E5FF]/15 transition-colors duration-300 group"
+              className="grid grid-cols-1 lg:grid-cols-[260px_1fr] bg-[var(--bg-surface)] border border-[var(--border)] rounded-xl overflow-hidden hover:border-[#00E5FF]/15 transition-colors duration-300 group"
             >
               {/* Left label */}
-              <div className="px-10 py-9 bg-[#16161F] border-b lg:border-b-0 lg:border-r border-white/[0.06] flex flex-col justify-center gap-1.5">
+              <div className="px-10 py-9 bg-[var(--bg-surface2)] border-b lg:border-b-0 lg:border-r border-[var(--border)] flex flex-col justify-center gap-1.5">
                 <span
-                  className="text-[10px] font-semibold uppercase tracking-[3px] text-[#00E5FF] mb-1"
+                  className="text-[10px] font-semibold uppercase tracking-[3px] text-[var(--cyan)] mb-1"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {cap.serviceSlug}
                 </span>
                 <span
-                  className="text-[19px] font-bold text-[#F4F6FA] leading-[1.2]"
+                  className="text-[19px] font-bold text-[var(--text)] leading-[1.2]"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {cap.label}
@@ -73,16 +73,16 @@ export default function Capabilities() {
                 {cap.items.map((item) => (
                   <div
                     key={item.title}
-                    className="px-8 py-8 hover:bg-[#0A0A0F]/60 transition-colors duration-200"
+                    className="px-8 py-8 hover:bg-[var(--bg)]/60 transition-colors duration-200"
                   >
                     <div
-                      className="text-[14px] font-bold text-[#F4F6FA] mb-2"
+                      className="text-[14px] font-bold text-[var(--text)] mb-2"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       {item.title}
                     </div>
                     <div
-                      className="text-[13px] text-[#8A94A6] leading-[1.6]"
+                      className="text-[13px] text-[var(--text-muted)] leading-[1.6]"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
                       {item.desc}

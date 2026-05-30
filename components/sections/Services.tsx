@@ -68,7 +68,7 @@ export default function Services() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="services" ref={ref} className="py-[120px] bg-[#10101A]">
+    <section id="services" ref={ref} className="py-[120px] bg-[var(--bg-surface)]">
       <div className="max-w-[1160px] mx-auto px-8">
         {/* Header */}
         <div className="text-center max-w-[640px] mx-auto mb-20">
@@ -76,7 +76,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-5"
+            className="block text-[11px] uppercase tracking-[4px] text-[var(--cyan)] opacity-80 mb-5"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             What We Build
@@ -85,7 +85,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 18 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.08, ease }}
-            className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[#F4F6FA] mb-5"
+            className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[var(--text)] mb-5"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Four service lines.<br />One unified standard.
@@ -94,7 +94,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.15, ease }}
-            className="text-[17px] text-[#8A94A6] leading-[1.75]"
+            className="text-[17px] text-[var(--text-muted)] leading-[1.75]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Every engagement is scoped, tiered, and delivered to production-grade quality. No shortcuts, no filler work.
@@ -102,14 +102,14 @@ export default function Services() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-white/[0.04] rounded-xl overflow-hidden border border-white/[0.04]">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-white/[0.04] rounded-xl overflow-hidden border border-[var(--border)]">
           {SERVICES.map((svc, i) => (
             <motion.div
               key={svc.id}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease }}
-              className="group relative bg-[#0A0A0F] p-10 flex flex-col hover:bg-[#0f0f18] transition-colors duration-300 cursor-default"
+              className="group relative bg-[var(--bg)] p-10 flex flex-col hover:bg-[var(--bg-surface)] transition-colors duration-300 cursor-default"
             >
               {/* Top accent line on hover */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00E5FF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: svc.id === 'consult' ? 'linear-gradient(90deg,transparent,#1A6BFF,transparent)' : undefined }} />
@@ -133,14 +133,14 @@ export default function Services() {
               </span>
 
               <h3
-                className="text-[22px] font-bold text-[#F4F6FA] leading-[1.2] mb-4"
+                className="text-[22px] font-bold text-[var(--text)] leading-[1.2] mb-4"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {svc.name}
               </h3>
 
               <p
-                className="text-[14px] text-[#8A94A6] leading-[1.7] mb-8 flex-1"
+                className="text-[14px] text-[var(--text-muted)] leading-[1.7] mb-8 flex-1"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {svc.description}
@@ -150,7 +150,7 @@ export default function Services() {
                 {svc.deliverables.map((d) => (
                   <li
                     key={d}
-                    className="flex items-center gap-3 text-[13px] text-[#8A94A6] py-2 border-b border-white/[0.05] last:border-0"
+                    className="flex items-center gap-3 text-[13px] text-[var(--text-muted)] py-2 border-b border-white/[0.05] last:border-0"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     <span
@@ -166,7 +166,7 @@ export default function Services() {
                 {svc.tiers.map((t) => (
                   <span
                     key={t}
-                    className="px-3 py-1 border border-white/[0.08] rounded-sm text-[10px] uppercase tracking-[1px] text-[#8A94A6] group-hover:border-white/20 group-hover:text-[#F4F6FA] transition-all duration-200"
+                    className="px-3 py-1 border border-[var(--border)] rounded-sm text-[10px] uppercase tracking-[1px] text-[var(--text-muted)] group-hover:border-white/20 group-hover:text-[var(--text)] transition-all duration-200"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {t}

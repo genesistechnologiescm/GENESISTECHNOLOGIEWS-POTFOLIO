@@ -83,7 +83,7 @@ export default function About() {
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-8 rounded-full border border-white/[0.07]"
+                className="absolute inset-8 rounded-full border border-[var(--border)]"
               >
                 <div className="absolute bottom-6 -right-1 w-1.5 h-1.5 rounded-full bg-[#1A6BFF]" />
               </motion.div>
@@ -111,7 +111,7 @@ export default function About() {
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease }}
-              className="block text-[11px] uppercase tracking-[4px] text-[#00E5FF] opacity-80 mb-5"
+              className="block text-[11px] uppercase tracking-[4px] text-[var(--cyan)] opacity-80 mb-5"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               Who We Are
@@ -121,7 +121,7 @@ export default function About() {
               initial={{ opacity: 0, y: 18 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.65, delay: 0.08, ease }}
-              className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[#F4F6FA] mb-6"
+              className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[var(--text)] mb-6"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Built at the intersection of precision and possibility.
@@ -131,7 +131,7 @@ export default function About() {
               initial={{ opacity: 0, y: 14 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15, ease }}
-              className="text-[17px] text-[#8A94A6] leading-[1.75] mb-4"
+              className="text-[17px] text-[var(--text-muted)] leading-[1.75] mb-4"
               style={{ fontFamily: "var(--font-body)" }}
             >
               Flint is a digital engineering company. We don&apos;t
@@ -144,7 +144,7 @@ export default function About() {
               initial={{ opacity: 0, y: 14 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2, ease }}
-              className="text-[17px] text-[#8A94A6] leading-[1.75] mb-10"
+              className="text-[17px] text-[var(--text-muted)] leading-[1.75] mb-10"
               style={{ fontFamily: "var(--font-body)" }}
             >
               We operate fully online with a lean, expert team model — lower
@@ -160,19 +160,19 @@ export default function About() {
                   initial={{ opacity: 0, y: 14 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.28 + i * 0.07, ease }}
-                  className="p-5 bg-[#10101A] border border-white/[0.06] rounded-lg hover:border-[#00E5FF]/20 transition-colors duration-200"
+                  className="p-5 bg-[var(--bg-surface)] border border-[var(--border)] rounded-lg hover:border-[#00E5FF]/20 transition-colors duration-200"
                 >
                   <div className="w-8 h-8 rounded-md bg-[#00E5FF]/[0.07] border border-[#00E5FF]/15 flex items-center justify-center mb-3">
                     {p.icon}
                   </div>
                   <div
-                    className="text-[14px] font-bold text-[#F4F6FA] mb-1"
+                    className="text-[14px] font-bold text-[var(--text)] mb-1"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {p.name}
                   </div>
                   <div
-                    className="text-[13px] text-[#8A94A6] leading-[1.5]"
+                    className="text-[13px] text-[var(--text-muted)] leading-[1.5]"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {p.desc}

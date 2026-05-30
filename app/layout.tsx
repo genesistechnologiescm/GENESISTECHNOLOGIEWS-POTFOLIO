@@ -52,6 +52,18 @@ export const metadata: Metadata = {
   },
 };
 
+// Inline script to prevent theme flash on load
+const themeScript = `
+(function() {
+  try {
+    var saved = localStorage.getItem('flint-theme');
+    if (saved === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  } catch(e) {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,9 +71,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
-        style={{ background: "#0A0A0F", color: "#F4F6FA" }}
       >
         {children}
       </body>

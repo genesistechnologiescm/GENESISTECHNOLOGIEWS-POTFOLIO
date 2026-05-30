@@ -42,7 +42,7 @@ export default function Hero() {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
           <span
-            className="text-[11px] uppercase tracking-[3px] text-[#00E5FF]"
+            className="text-[11px] uppercase tracking-[3px] text-[var(--cyan)]"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Flint · Est. 2026
@@ -54,12 +54,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease }}
-          className="text-[clamp(44px,7.5vw,96px)] font-bold leading-[1.03] tracking-[-2px] text-[#F4F6FA] mb-7 max-w-[820px]"
+          className="text-[clamp(44px,7.5vw,96px)] font-bold leading-[1.03] tracking-[-2px] text-[var(--text)] mb-7 max-w-[820px]"
           style={{ fontFamily: "var(--font-display)" }}
         >
           The Origin and<br />
           Direction of Your{" "}
-          <span className="text-[#00E5FF]">Digital</span>
+          <span className="text-[var(--cyan)]">Digital</span>
           <br />
           Evolution.
         </motion.h1>
@@ -69,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.22, ease }}
-          className="text-[19px] text-[#8A94A6] leading-[1.75] max-w-[580px] mb-12"
+          className="text-[19px] text-[var(--text-muted)] leading-[1.75] max-w-[580px] mb-12"
           style={{ fontFamily: "var(--font-body)" }}
         >
           Custom software, AI systems, data intelligence, and strategic tech
@@ -93,7 +93,7 @@ export default function Hero() {
           </a>
           <a
             href="#services"
-            className="inline-flex items-center gap-2.5 px-8 py-4 border border-white/10 text-[#F4F6FA] rounded font-semibold text-[15px] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
+            className="inline-flex items-center gap-2.5 px-8 py-4 border border-white/10 text-[var(--text)] rounded font-semibold text-[15px] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Explore services →
@@ -109,7 +109,7 @@ export default function Hero() {
         >
           <div className="w-px h-10 bg-gradient-to-b from-transparent to-[#1A6BFF]" />
           <span
-            className="text-[10px] uppercase tracking-[3px] text-[#8A94A6]"
+            className="text-[10px] uppercase tracking-[3px] text-[var(--text-muted)]"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Scroll
