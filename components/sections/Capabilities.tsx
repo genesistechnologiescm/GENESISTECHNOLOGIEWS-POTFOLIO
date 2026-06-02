@@ -30,7 +30,7 @@ export default function Capabilities() {
             className="text-[clamp(26px,3.5vw,44px)] font-bold leading-[1.15] tracking-[-0.5px] text-[var(--text)] mb-5"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            What we&apos;re capable of building — today and tomorrow.
+            What we&apos;re capable of building, today and tomorrow.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}

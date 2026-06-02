@@ -52,7 +52,7 @@ export default function Why() {
               style={{ fontFamily: "var(--font-body)" }}
             >
               Most digital agencies hand you a file and disappear. We architect
-              systems that run your business better — measurably, reliably, and
+              systems that run your business better, measurably, reliably, and
               built to grow with you.
             </motion.p>
 
@@ -90,7 +90,7 @@ export default function Why() {
             </motion.div>
           </div>
 
-          {/* Right — differentiator points */}
+          {/* Right, differentiator points */}
           <div className="flex flex-col gap-3">
             {WHY_POINTS.map((p, i) => (
               <motion.div

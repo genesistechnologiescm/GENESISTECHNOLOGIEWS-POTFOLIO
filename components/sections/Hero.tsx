@@ -73,7 +73,7 @@ export default function Hero() {
           style={{ fontFamily: "var(--font-body)" }}
         >
           Custom software, AI systems, data intelligence, and strategic tech
-          advisory — built with precision for businesses ready to operate at the
+          advisory, built with precision for businesses ready to operate at the
           highest level.
         </motion.p>
 

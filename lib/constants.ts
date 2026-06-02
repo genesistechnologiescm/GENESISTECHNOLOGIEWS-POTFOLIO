@@ -12,7 +12,7 @@ export const SERVICES = [
     slug: "Flint Build",
     name: "Custom Software Development",
     description:
-      "Full-stack web applications, business platforms, client portals, and API systems — built from scratch to your exact specification. No templates. No compromises.",
+      "Full-stack web applications, business platforms, client portals, and API systems, built from scratch to your exact specification. No templates. No compromises.",
     deliverables: [
       "Business websites & web applications",
       "Client portals & dashboards",
@@ -90,7 +90,7 @@ export const PROCESS_STEPS = [
   {
     num: "03",
     title: "Build & Iterate",
-    desc: "Phased development with regular check-ins. You see progress at every stage — feedback loops are built into the timeline.",
+    desc: "Phased development with regular check-ins. You see progress at every stage, feedback loops are built into the timeline.",
   },
   {
     num: "04",
@@ -131,9 +131,9 @@ export const CAPABILITIES = [
     serviceSlug: "Flint Consult",
     label: "Strategic Advisory",
     items: [
-      { title: "Technology Audit", desc: "We map your full technical landscape — what's working, what's costing you, what needs replacing." },
+      { title: "Technology Audit", desc: "We map your full technical landscape, what's working, what's costing you, what needs replacing." },
       { title: "Roadmap Design", desc: "A prioritised, phased plan with clear ROI at each step. Built to be actioned, not filed." },
-      { title: "Fractional CTO", desc: "Senior technical leadership embedded in your team — strategy, hiring advice, and vendor oversight." },
+      { title: "Fractional CTO", desc: "Senior technical leadership embedded in your team, strategy, hiring advice, and vendor oversight." },
     ],
   },
 ] as const;
@@ -141,7 +141,7 @@ export const CAPABILITIES = [
 export const WHY_POINTS = [
   {
     title: "Senior-level execution on every project",
-    desc: "No junior handoffs. The same expertise that scoped your project builds it — start to finish.",
+    desc: "No junior handoffs. The same expertise that scoped your project builds it, start to finish.",
   },
   {
     title: "Fixed-scope proposals, 3-tier pricing",
@@ -149,7 +149,7 @@ export const WHY_POINTS = [
   },
   {
     title: "Max 3 active clients at any time",
-    desc: "Scarcity by design. Every client gets our full bandwidth — not a fraction of it.",
+    desc: "Scarcity by design. Every client gets our full bandwidth, not a fraction of it.",
   },
   {
     title: "No generic solutions, ever",

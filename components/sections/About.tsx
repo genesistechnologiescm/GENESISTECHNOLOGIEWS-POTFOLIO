@@ -35,7 +35,7 @@ const pillars = [
       </svg>
     ),
     name: "Secure by Design",
-    desc: "Security built in from day one — not bolted on at the end.",
+    desc: "Security built in from day one, not bolted on at the end.",
   },
   {
     icon: (
@@ -62,7 +62,7 @@ export default function About() {
       <div className="max-w-[1160px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
-          {/* Visual — animated rings */}
+          {/* Visual, animated rings */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -136,7 +136,7 @@ export default function About() {
             >
               Flint is a digital engineering company. We don&apos;t
               sell templates or off-the-shelf tools. Every system we design is
-              purpose-built around your business — your data, your workflows,
+              purpose-built around your business, your data, your workflows,
               your future.
             </motion.p>
 
@@ -147,7 +147,7 @@ export default function About() {
               className="text-[17px] text-[var(--text-muted)] leading-[1.75] mb-10"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              We operate fully online with a lean, expert team model — lower
+              We operate fully online with a lean, expert team model, lower
               overhead, faster delivery, and direct access to senior-level
               thinking on every project.
             </motion.p>
